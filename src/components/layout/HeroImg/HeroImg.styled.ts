@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import homeBack from '../../../assets/home_back.jpeg';
+import homeBack from '../../../assets/hero.jpeg';
 
 export const HeroImgStyled = styled.div`
   position: absolute;
