@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const HeroSectionStyled = styled.section`
   color: var(--whiteColor);
-  height: 90vh;
+  height: 77vh;
 `;
 
 export const HeroSectionH1 = styled.h1`

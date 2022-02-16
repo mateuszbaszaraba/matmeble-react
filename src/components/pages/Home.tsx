@@ -3,6 +3,7 @@ import Wrapper from '../layout/shared/Wrapper/Wrapper';
 import HeroImg from '../layout/HeroImg/HeroImg';
 import Header from '../layout/shared/Header/Header';
 import HeroSection from '../layout/HeroSection/HeroSection';
+import IconSection from '../layout/IconSection/IconSection';
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Wrapper>
         <Header />
         <HeroSection />
+        <IconSection />
       </Wrapper>
     </>
   );

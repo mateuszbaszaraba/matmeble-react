@@ -17,9 +17,9 @@ const HeroSection = (): JSX.Element => (
       <path
         d='M21.5 35.8333L21.4999 1.5M21.5 35.8333L13.1667 27.5M21.5 35.8333L29.8333 27.5'
         stroke='white'
-        stroke-width='2'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='2'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </HeroSectionSvg>
   </HeroSectionStyled>
