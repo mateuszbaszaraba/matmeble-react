@@ -1,8 +1,8 @@
 import React from 'react';
 import { HeaderStyled } from './Header.styled';
-import Logo from './Logo';
-import Nav from './Nav';
-import HamburgerIcon from './HamburgerIcon';
+import Logo from './subcomponents/Logo/Logo';
+import Nav from './subcomponents/Nav/Nav';
+import HamburgerIcon from './subcomponents/HamburgerIcon/HamburgerIcon';
 
 const Header = (): JSX.Element => (
   <HeaderStyled>
