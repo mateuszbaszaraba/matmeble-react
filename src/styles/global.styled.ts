@@ -8,6 +8,9 @@ const GlobalStyles = createGlobalStyle`
   }
   
   :root {
+    --globalMargin: 1.5em;
+    --minusGlobalMargin: -1.5em;
+    
     --whiteColor: #FFF;
     --blackFontColor: #5E5E5E;
     --goldColor: #E4C68B;
