@@ -3,6 +3,7 @@ import styled from 'styled-components';
 export const HeroSectionStyled = styled.section`
   color: var(--whiteColor);
   height: 77vh;
+  margin-left: 1.5em;
 `;
 
 export const HeroSectionH1 = styled.h1`
