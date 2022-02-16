@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const IconSectionStyled = styled.section`
   width: 100%;
   height: auto;
-  padding-top: 2em;
+  padding-top: 2.9em;
   position: relative;
   color: var(--blackFontColor);
 `;
