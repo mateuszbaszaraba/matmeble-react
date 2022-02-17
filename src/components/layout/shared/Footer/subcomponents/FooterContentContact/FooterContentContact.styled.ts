@@ -4,8 +4,9 @@ export const FooterContentContactStyled = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  margin: 6em auto 0 auto;
-  width: 60%;
+  margin: 0 auto 0 auto;
+  width: 55%;
+  color: var(--whiteColor);
 `;
 
 export const FooterContentPhone = styled.svg`
