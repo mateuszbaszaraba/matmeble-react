@@ -11,7 +11,7 @@ export const AboutSectionStyled = styled.div`
   background-position-x: 51%;
   position: relative;
   z-index: -1;
-  margin-bottom: 57%;
+  margin-bottom: 20vh;
 `;
 
 export const AboutSectionText = styled.p`
@@ -24,5 +24,5 @@ export const AboutSectionText = styled.p`
   width: 80%;
   padding: 2em;
   position: absolute;
-  top: 57%;
+  top: 33vh;
 `;
