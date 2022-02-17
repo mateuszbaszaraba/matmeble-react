@@ -1,6 +1,6 @@
 import React from 'react';
 import { FooterLogoStyled, FooterLogoBack } from './FooterLogo.styled';
-import FooterLogoContent from './FooterLogoContent';
+import FooterLogoContent from '../FooterLogoContent/FooterLogoContent';
 
 const FooterLogo = (): JSX.Element => {
   return (

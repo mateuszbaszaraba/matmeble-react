@@ -11,7 +11,7 @@ export const AboutSectionStyled = styled.div`
   background-position-x: 51%;
   position: relative;
   z-index: -1;
-  margin-bottom: 20vh;
+  margin-bottom: 29vh;
 `;
 
 export const AboutSectionText = styled.p`
