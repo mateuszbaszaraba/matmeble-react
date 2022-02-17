@@ -1,7 +1,7 @@
 import React from 'react';
 import { AboutSectionStyled, AboutSectionText } from './AboutSection.styled';
 
-const AboutSection = () => {
+const AboutSection = (): JSX.Element => {
   return (
     <AboutSectionStyled>
       <AboutSectionText>

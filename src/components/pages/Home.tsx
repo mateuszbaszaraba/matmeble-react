@@ -5,6 +5,7 @@ import Header from '../layout/shared/Header/Header';
 import HeroSection from '../layout/HeroSection/HeroSection';
 import IconSection from '../layout/IconSection/IconSection';
 import AboutSection from '../layout/AboutSection/AboutSection';
+import Footer from '../layout/shared/Footer/Footer';
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         <HeroSection />
         <IconSection />
         <AboutSection />
+        <Footer />
       </Wrapper>
     </>
   );

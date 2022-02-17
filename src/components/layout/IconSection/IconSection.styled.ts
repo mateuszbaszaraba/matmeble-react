@@ -12,7 +12,7 @@ export const IconSectionBackground = styled.div`
   position: absolute;
   background-color: var(--lightGreyColor);
   width: 100%;
-  height: 42em;
+  height: 44em;
   z-index: -9;
   margin-left: var(--minusGlobalMargin);
   padding-right: calc(var(--globalMargin) * 2);

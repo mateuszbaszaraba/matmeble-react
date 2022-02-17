@@ -6,16 +6,18 @@ export const AboutSectionStyled = styled.div`
   background-size: cover;
   width: 100%;
   height: 50vh;
-  position: absolute;
+  padding-right: calc(var(--globalMargin) * 2);
   margin: 1.5em 0 0 var(--minusGlobalMargin);
   background-position-x: 51%;
+  position: relative;
   z-index: -1;
+  margin-bottom: 57%;
 `;
 
 export const AboutSectionText = styled.p`
   color: var(--whiteColor);
   background-color: var(--lightBrownColor);
-  opacity: 0.82;
+  opacity: 0.91;
   backdrop-filter: blur(23px) opacity(82%);
   font-size: 1.1rem;
   font-weight: lighter;
