@@ -15,17 +15,19 @@ export const AboutIconInfo = styled.div`
 export const AboutIconTitle = styled.p`
   font-size: 1.4rem;
   margin-bottom: 0;
+  font-weight: bold;
 `;
 
 export const AboutIconDesc = styled.p`
   font-size: 1rem;
-  margin-top: 0.6em;
+  margin-top: 0.4em;
+  font-weight: lighter;
 `;
 
 export const AboutIconIcon = styled.div`
   width: 10%;
   svg {
-    width: 2.5em !important;
+    width: 2.9em !important;
     height: unset;
   }
 `;

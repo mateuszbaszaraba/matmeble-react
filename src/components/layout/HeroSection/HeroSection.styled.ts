@@ -2,7 +2,8 @@ import styled from 'styled-components';
 
 export const HeroSectionStyled = styled.section`
   color: var(--whiteColor);
-  height: 77vh;
+  height: 69vh;
+  margin-top: 20vh;
   margin-left: 1.5em;
 `;
 
@@ -14,7 +15,7 @@ export const HeroSectionH1 = styled.h1`
 
 export const HeroSectionP = styled.p`
   font-size: 1.4rem;
-  margin-top: 4em;
+  margin-top: 0;
   margin-bottom: 0;
 `;
 
