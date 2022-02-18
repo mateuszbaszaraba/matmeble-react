@@ -5,6 +5,10 @@ export const HeroSectionStyled = styled.section`
   height: 69vh;
   margin-top: 20vh;
   margin-left: 1.5em;
+
+  @media only screen and (min-width: 680px) {
+    margin-left: 1em;
+  }
 `;
 
 export const HeroSectionH1 = styled.h1`

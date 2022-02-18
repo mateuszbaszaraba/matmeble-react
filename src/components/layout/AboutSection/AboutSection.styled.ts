@@ -15,6 +15,10 @@ export const AboutSectionBack = styled.div`
   margin: 0 0 0 var(--minusGlobalMargin);
   background-position-x: 51%;
   z-index: -1;
+  @media only screen and (min-width: 680px) {
+    padding-right: 0;
+    margin-left: -3em;
+  }
 `;
 
 export const AboutSectionText = styled.p`
@@ -28,4 +32,7 @@ export const AboutSectionText = styled.p`
   padding: 2em;
   margin-top: 33vh;
   float: left;
+  @media only screen and (min-width: 680px) {
+    margin-left: 10em;
+  }
 `;
