@@ -4,12 +4,18 @@ const GlobalStyles = createGlobalStyle`
   
   body {
     font-family: 'Lato', sans-serif;
-    margin: 1.5em
+    margin: var(--globalMargin);
   }
   
   :root {
     --globalMargin: 1.5em;
     --minusGlobalMargin: -1.5em;
+    
+    --globalMarginTablet: 1.5em 5em;
+    
+    --tabletSize: 680px;
+    --desktopSize: 980px;
+    --fixedSize: 1200px;
     
     --whiteColor: #FFF;
     --blackFontColor: #5E5E5E;
@@ -19,6 +25,12 @@ const GlobalStyles = createGlobalStyle`
     --lightBrownColor: #332E27;
     --greyColor: #595959;
     --lightGreyColor: #EDEDED;
+
+    @media only screen and (min-width: 680px) {
+      --globalMargin: var(--globalMarginTablet);
+      --minusGlobalMargin: calc(-1 * var(--globalMarginTablet));
+    }
+    
   }
   
   `;

@@ -14,7 +14,8 @@ export const FooterBack = styled.div`
   height: 60vh;
   background-color: var(--blackColor);
   margin-left: var(--minusGlobalMargin);
-  margin-bottom: var(--minusGlobalMargin);
+  padding-right: var(--globalMargin);
   position: absolute;
+  left: 0;
   z-index: -1;
 `;

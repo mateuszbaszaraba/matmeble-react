@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import aboutBack from '../../../assets/about_back.jpeg';
 
-export const AboutSectionStyled = styled.div`
+export const AboutSectionStyled = styled.section`
   width: 100%;
   height: 70vh;
 `;

@@ -3,7 +3,6 @@ import styled from 'styled-components';
 export const IconSectionStyled = styled.section`
   width: 100%;
   height: 70vh;
-  position: relative;
   color: var(--blackFontColor);
   display: flex;
   flex-direction: column;
@@ -12,13 +11,12 @@ export const IconSectionStyled = styled.section`
 `;
 
 export const IconSectionBackground = styled.div`
-  position: absolute;
-  background-color: var(--lightGreyColor);
   width: 100%;
   height: 90vh;
-  z-index: -9;
+  background-color: var(--lightGreyColor);
   margin-left: var(--minusGlobalMargin);
-  padding-right: calc(var(--globalMargin) * 2);
-  top: -6em;
+  padding-right: var(--globalMargin);
+  position: absolute;
   left: 0;
+  z-index: -9;
 `;

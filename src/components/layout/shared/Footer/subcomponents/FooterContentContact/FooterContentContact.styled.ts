@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const FooterContentContactStyled = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   margin: 0 auto 0 auto;
   width: 55%;
