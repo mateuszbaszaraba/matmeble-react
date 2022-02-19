@@ -14,7 +14,7 @@ const GlobalStyles = createGlobalStyle`
     --globalMarginTablet: 1.5em 5em;
     
     --tabletSize: 680px;
-    --desktopSize: 980px;
+    --desktopSize: 920px;
     --fixedSize: 1200px;
     
     --whiteColor: #FFF;

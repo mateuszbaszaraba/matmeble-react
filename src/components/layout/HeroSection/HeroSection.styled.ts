@@ -34,4 +34,7 @@ export const HeroSectionSvg = styled.svg`
   bottom: 3em;
   left: 50%;
   margin-left: -2em;
+  @media only screen and (min-width: 920px) {
+    display: none;
+  }
 `;
