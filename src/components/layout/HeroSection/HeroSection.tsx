@@ -5,10 +5,12 @@ import {
   HeroSectionSvg,
   HeroSectionH1,
   HeroSectionP,
+  HeroImgg,
 } from './HeroSection.styled';
 
 const HeroSection = (): JSX.Element => (
   <HeroSectionStyled>
+    <HeroImgg />
     <HeroSectionP>WYSOKA JAKOŚĆ</HeroSectionP>
     <HeroSectionH1>
       <HeroSectionSpan>INNOWACYJNE</HeroSectionSpan> ROZWIĄZANIA
