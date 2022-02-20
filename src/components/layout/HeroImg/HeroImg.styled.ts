@@ -11,4 +11,9 @@ export const HeroImgStyled = styled.div`
   width: 100%;
   height: 100vh;
   z-index: -1;
+
+  @media only screen and (min-width: 920px) {
+    height: 80vh;
+    background-position-y: 40%;
+  }
 `;

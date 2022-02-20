@@ -8,6 +8,11 @@ export const IconSectionStyled = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+
+  @media only screen and (min-width: 920px) {
+    flex-direction: row;
+    height: 40vh;
+  }
 `;
 
 export const IconSectionBackground = styled.div`
@@ -19,4 +24,9 @@ export const IconSectionBackground = styled.div`
   position: absolute;
   left: 0;
   z-index: -9;
+
+  @media only screen and (min-width: 920px) {
+    height: 60vh;
+    padding-top: 20vh;
+  }
 `;

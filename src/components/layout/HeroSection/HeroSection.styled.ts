@@ -9,6 +9,10 @@ export const HeroSectionStyled = styled.section`
   @media only screen and (min-width: 680px) {
     margin-left: 1em;
   }
+
+  @media only screen and (min-width: 920px) {
+    height: 50vh;
+  }
 `;
 
 export const HeroSectionH1 = styled.h1`
@@ -34,6 +38,7 @@ export const HeroSectionSvg = styled.svg`
   bottom: 3em;
   left: 50%;
   margin-left: -2em;
+
   @media only screen and (min-width: 920px) {
     display: none;
   }
