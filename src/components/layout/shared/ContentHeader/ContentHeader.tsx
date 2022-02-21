@@ -2,15 +2,21 @@ import React from 'react';
 import {
   FooterContentHeaderP1,
   FooterContentHeaderP2,
-  FooterContentHeaderStyled,
+  ContentHeaderStyled,
   FooterContentLine,
-} from './FooterContentHeader.styled';
+} from './ContentHeader.styled';
 
-const FooterContentHeader = (): JSX.Element => {
+const ContentHeader = ({
+  lightHeader,
+  boldHeader,
+}: {
+  lightHeader: string;
+  boldHeader: string;
+}): JSX.Element => {
   return (
-    <FooterContentHeaderStyled>
-      <FooterContentHeaderP1>masz pytania?</FooterContentHeaderP1>
-      <FooterContentHeaderP2>zadzwoń!</FooterContentHeaderP2>
+    <ContentHeaderStyled>
+      <FooterContentHeaderP1>{lightHeader}</FooterContentHeaderP1>
+      <FooterContentHeaderP2>{boldHeader}</FooterContentHeaderP2>
       <FooterContentLine
         viewBox='0 0 242 16'
         fill='none'
@@ -24,8 +30,8 @@ const FooterContentHeader = (): JSX.Element => {
           strokeLinejoin='round'
         />
       </FooterContentLine>
-    </FooterContentHeaderStyled>
+    </ContentHeaderStyled>
   );
 };
 
-export default FooterContentHeader;
+export default ContentHeader;

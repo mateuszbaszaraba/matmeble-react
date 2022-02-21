@@ -7,6 +7,7 @@ export const FooterStyled = styled.footer`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  color: var(--whiteColor);
 `;
 
 export const FooterBack = styled.div`
@@ -17,5 +18,5 @@ export const FooterBack = styled.div`
   padding-right: var(--globalMargin);
   position: absolute;
   left: 0;
-  z-index: -1;
+  z-index: -2;
 `;
