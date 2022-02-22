@@ -17,7 +17,7 @@ export const NavStyled = styled.nav`
     position: unset;
     display: block;
     width: auto;
-    height: auto;
+    height: 15vh;
     background: none;
   }
 `;

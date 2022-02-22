@@ -1,6 +1,5 @@
 import React from 'react';
 import Wrapper from '../layout/shared/Wrapper/Wrapper';
-import Header from '../layout/shared/Header/Header';
 import HeroSection from '../layout/HeroSection/HeroSection';
 import IconSection from '../layout/IconSection/IconSection';
 import AboutSection from '../layout/AboutSection/AboutSection';
@@ -12,7 +11,6 @@ const Home = () => {
   return (
     <>
       <Wrapper>
-        <Header />
         <HeroSection />
         <CentralInfo />
         <IconSection />

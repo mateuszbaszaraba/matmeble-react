@@ -7,9 +7,16 @@ const NavLink: React.FC<{ to: string }> = ({ children, to }): JSX.Element => {
   let match = useMatch({ path: resolved.pathname, end: true });
 
   let props = { match };
+
+  const handleMenuClose = () => {
+    const nav = document.querySelector('nav');
+
+    nav!.style.transform = 'translateX(100%)';
+  };
+
   return (
     <li>
-      <NavLinkStyled to={to} {...props}>
+      <NavLinkStyled to={to} {...props} onClick={handleMenuClose}>
         {children}
       </NavLinkStyled>
     </li>
