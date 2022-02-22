@@ -3,7 +3,7 @@ import homeBack from '../../../assets/hero.jpeg';
 
 export const HeroSectionStyled = styled.section`
   color: var(--whiteColor);
-  height: 69vh;
+  height: 66.5vh;
   margin-top: 20vh;
   margin-left: 1.5em;
 
@@ -12,7 +12,7 @@ export const HeroSectionStyled = styled.section`
   }
 
   @media only screen and (min-width: 920px) {
-    height: 50vh;
+    height: 45vh;
   }
 `;
 

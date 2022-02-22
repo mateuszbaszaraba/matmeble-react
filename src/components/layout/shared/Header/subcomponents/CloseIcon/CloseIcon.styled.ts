@@ -5,4 +5,8 @@ export const CloseIconStyled = styled.svg`
   float: right;
   margin: 2em;
   cursor: pointer;
+
+  @media only screen and (min-width: 920px) {
+    display: none;
+  }
 `;

@@ -11,4 +11,13 @@ export const NavStyled = styled.nav`
   text-transform: uppercase;
   transform: translateX(100%);
   transition: transform 0.5s ease-in-out;
+
+  @media only screen and (min-width: 920px) {
+    transform: translateX(0);
+    position: unset;
+    display: block;
+    width: auto;
+    height: auto;
+    background: none;
+  }
 `;
