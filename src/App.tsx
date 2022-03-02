@@ -9,17 +9,20 @@ import GlobalStyles from './styles/global.styled';
 import Home from './components/pages/Home';
 import Products from './components/pages/Products';
 import Header from './components/layout/shared/Header/Header';
+import AdminLogin from './components/pages/AdminLogin';
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <Router>
-        <Header />
         <Routes>
-          <Route path='' element={<Navigate to='/home' />} />
-          <Route path='/home' element={<Home />} />
-          <Route path='/nasze-produkty' element={<Products />} />
+          <Route element={<Header />}>
+            <Route path='' element={<Navigate to='/home' />} />
+            <Route path='/home' element={<Home />} />
+            <Route path='/nasze-produkty' element={<Products />} />
+          </Route>
+          <Route path='/admin-login' element={<AdminLogin />} />
         </Routes>
       </Router>
     </>

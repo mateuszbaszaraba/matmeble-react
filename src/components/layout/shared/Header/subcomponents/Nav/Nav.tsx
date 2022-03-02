@@ -4,7 +4,7 @@ import { NavStyled } from './Nav.styled';
 import CloseIcon from '../CloseIcon/CloseIcon';
 
 const Nav = (): JSX.Element => (
-  <NavStyled id='nav'>
+  <NavStyled>
     <CloseIcon />
     <NavElements />
   </NavStyled>

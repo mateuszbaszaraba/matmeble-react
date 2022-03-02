@@ -11,7 +11,9 @@ const NavLink: React.FC<{ to: string }> = ({ children, to }): JSX.Element => {
   const handleMenuClose = () => {
     const nav = document.querySelector('nav');
 
-    nav!.style.transform = 'translateX(100%)';
+    if (nav!.style.transform === 'translateX(0%)') {
+      nav!.style.transform = 'translateX(100%)';
+    }
   };
 
   return (

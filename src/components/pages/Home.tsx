@@ -9,16 +9,14 @@ import ColorSection from '../layout/ColorSection/ColorSection';
 
 const Home = () => {
   return (
-    <>
-      <Wrapper>
-        <HeroSection />
-        <CentralInfo />
-        <IconSection />
-        <AboutSection />
-        <ColorSection />
-        <Footer />
-      </Wrapper>
-    </>
+    <Wrapper>
+      <HeroSection />
+      <CentralInfo />
+      <IconSection />
+      <AboutSection />
+      <ColorSection />
+      <Footer />
+    </Wrapper>
   );
 };
 

@@ -6,6 +6,7 @@ const Products = () => {
   return (
     <Wrapper>
       <ProdInfoSection />
+      {/*<Products />*/}
     </Wrapper>
   );
 };
