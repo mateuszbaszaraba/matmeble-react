@@ -46,7 +46,6 @@ export const AuthProvider = (): JSX.Element => {
       first_name: temp.first_name,
       last_name: temp.last_name,
     });
-    console.log('setAuthUser run', tokens);
   };
 
   let loginUser = async (event: React.FormEvent<CustomFormElements>) => {
@@ -57,11 +56,8 @@ export const AuthProvider = (): JSX.Element => {
         password: event.currentTarget.elements.password.value,
       })
       .then((response) => {
-        console.log(response);
-        console.log(response.data);
         if (response.status === 200) {
           setAuthUser(response.data);
-          console.log('navigate...');
           navigate('/admin/dashboard');
         }
       })
