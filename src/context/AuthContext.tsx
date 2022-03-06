@@ -4,46 +4,57 @@ import axios from 'axios';
 import { Endpoints } from '../services/constants';
 import { useNavigate } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
+import {
+  Tokens,
+  User,
+  AuthContextTypes,
+  CustomFormElements,
+} from '../services/types';
 
 const AuthContextDefaultState = {
   user: null,
   tokens: null,
-  setAuthUser: (tokens: any) => {},
-  loginUser: (event: any) => {},
+  loginUser: async (event: React.FormEvent<CustomFormElements>) => {},
 };
 
-const AuthContext = React.createContext(AuthContextDefaultState);
+const AuthContext = React.createContext<AuthContextTypes>(
+  AuthContextDefaultState
+);
 
 export default AuthContext;
 
 export const AuthProvider = (): JSX.Element => {
-  const [tokens, setTokens] = useState(() =>
+  const [tokens, setTokens] = useState<Tokens | null>(() =>
     localStorage.getItem('authTokens')
       ? JSON.parse(localStorage.getItem('authTokens')!)
       : null
   );
-  const [user, setUser] = useState(
-    localStorage.getItem('authTokens')
-      ? jwtDecode(localStorage.getItem('authTokens')!)
-      : null
+  const [user, setUser] = useState<User | null>(
+    tokens ? jwtDecode(tokens.access) : null
   );
-  const [loading, setLoading] = useState(true);
+  const [loading, setLoading] = useState<boolean>(true);
 
   let navigate = useNavigate();
 
-  const setAuthUser = (tokens: any) => {
+  const setAuthUser = (tokens: Tokens) => {
     localStorage.setItem('authTokens', JSON.stringify(tokens));
     setTokens(tokens);
-    setUser(jwtDecode(tokens.access));
+    let temp: User = jwtDecode(tokens.access);
+    setUser({
+      email: temp.email,
+      user_name: temp.user_name,
+      first_name: temp.first_name,
+      last_name: temp.last_name,
+    });
     console.log('setAuthUser run', tokens);
   };
 
-  let loginUser = async (event: any) => {
+  let loginUser = async (event: React.FormEvent<CustomFormElements>) => {
     event.preventDefault();
     await axios
       .post(Endpoints.login, {
-        email: event.target.email.value,
-        password: event.target.password.value,
+        email: event.currentTarget.elements.email.value,
+        password: event.currentTarget.elements.password.value,
       })
       .then((response) => {
         console.log(response);
@@ -62,7 +73,6 @@ export const AuthProvider = (): JSX.Element => {
   let contextData = {
     user: user,
     tokens: tokens,
-    setAuthUser: setAuthUser,
     loginUser: loginUser,
   };
 
