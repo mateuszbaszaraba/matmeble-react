@@ -24,7 +24,11 @@ const AuthContext = React.createContext<AuthContextTypes>(
 export default AuthContext;
 
 export const AuthProvider = (): JSX.Element => {
-  const [tokens, setTokens] = useState<Tokens | null>(null);
+  const [tokens, setTokens] = useState<Tokens | null>(() =>
+    localStorage.getItem('authTokens')
+      ? JSON.parse(localStorage.getItem('authTokens')!)
+      : null
+  );
   const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -32,11 +36,16 @@ export const AuthProvider = (): JSX.Element => {
 
   useEffect(() => {
     if (localStorage.getItem('authTokens')) {
-      setTokens(JSON.parse(localStorage.getItem('authTokens')!));
-      setUser(jwtDecode(tokens!.access));
+      let temp: User = jwtDecode(tokens!.access);
+      setUser({
+        email: temp.email,
+        user_name: temp.user_name,
+        first_name: temp.first_name,
+        last_name: temp.last_name,
+      });
       setLoading(false);
     }
-  }, []);
+  }, [tokens]);
 
   useEffect(() => {
     navigate('/admin/dashboard');
@@ -81,7 +90,7 @@ export const AuthProvider = (): JSX.Element => {
   return (
     <>
       <AuthContext.Provider value={contextData}>
-        {<Outlet />}
+        {loading ? null : <Outlet />}
       </AuthContext.Provider>
     </>
   );
