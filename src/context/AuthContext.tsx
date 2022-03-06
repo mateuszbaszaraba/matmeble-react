@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Outlet } from 'react-router-dom';
 import axios from 'axios';
 import { Endpoints } from '../services/constants';
@@ -24,17 +24,23 @@ const AuthContext = React.createContext<AuthContextTypes>(
 export default AuthContext;
 
 export const AuthProvider = (): JSX.Element => {
-  const [tokens, setTokens] = useState<Tokens | null>(() =>
-    localStorage.getItem('authTokens')
-      ? JSON.parse(localStorage.getItem('authTokens')!)
-      : null
-  );
-  const [user, setUser] = useState<User | null>(
-    tokens ? jwtDecode(tokens.access) : null
-  );
+  const [tokens, setTokens] = useState<Tokens | null>(null);
+  const [user, setUser] = useState<User | null>(null);
   const [loading, setLoading] = useState<boolean>(true);
 
   let navigate = useNavigate();
+
+  useEffect(() => {
+    if (localStorage.getItem('authTokens')) {
+      setTokens(JSON.parse(localStorage.getItem('authTokens')!));
+      setUser(jwtDecode(tokens!.access));
+      setLoading(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    navigate('/admin/dashboard');
+  }, [loading]);
 
   const setAuthUser = (tokens: Tokens) => {
     localStorage.setItem('authTokens', JSON.stringify(tokens));
@@ -58,7 +64,7 @@ export const AuthProvider = (): JSX.Element => {
       .then((response) => {
         if (response.status === 200) {
           setAuthUser(response.data);
-          navigate('/admin/dashboard');
+          setLoading(false);
         }
       })
       .catch(function (error) {

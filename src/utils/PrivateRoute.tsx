@@ -9,7 +9,7 @@ const PrivateRoute: React.FC<{ [x: string]: any }> = ({
 }): JSX.Element => {
   let { tokens } = useContext(AuthContext);
 
-  return tokens ? <Outlet /> : <Navigate to='/admin-login' />;
+  return tokens ? <Outlet /> : <Navigate to='/admin/login' />;
 };
 
 export default PrivateRoute;
