@@ -10,6 +10,9 @@ import Home from './components/pages/Home';
 import Products from './components/pages/Products';
 import Header from './components/layout/shared/Header/Header';
 import AdminLogin from './components/pages/AdminLogin';
+import AdminDashboard from './components/layout/AdminDashboard/AdminDashboard';
+import PrivateRoute from './utils/PrivateRoute';
+import { AuthProvider } from './context/AuthContext';
 
 function App() {
   return (
@@ -22,7 +25,12 @@ function App() {
             <Route path='/home' element={<Home />} />
             <Route path='/nasze-produkty' element={<Products />} />
           </Route>
-          <Route path='/admin-login' element={<AdminLogin />} />
+          <Route element={<AuthProvider />}>
+            <Route path='/admin/login' element={<AdminLogin />} />
+            <Route element={<PrivateRoute />}>
+              <Route path='/admin/dashboard' element={<AdminDashboard />} />
+            </Route>
+          </Route>
         </Routes>
       </Router>
     </>

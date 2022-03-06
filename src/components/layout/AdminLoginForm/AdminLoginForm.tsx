@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import {
   AdminLoginFormStyled,
   AdminInput,
@@ -6,16 +6,29 @@ import {
   AdminLabel,
   AdminSubmitButton,
 } from './AdminLoginForm.styled';
+import AuthContext from '../../../context/AuthContext';
 
 const AdminLoginForm = (): JSX.Element => {
+  let { loginUser } = useContext(AuthContext);
+
   return (
     <AdminLoginFormStyled>
-      <AdminForm>
+      <AdminForm onSubmit={loginUser}>
         <AdminLabel htmlFor='username'>Email</AdminLabel>
-        <AdminInput type='text' placeholder='Email or Phone' id='username' />
+        <AdminInput
+          name='email'
+          type='text'
+          placeholder='Email or Phone'
+          id='username'
+        />
 
         <AdminLabel htmlFor='password'>Password</AdminLabel>
-        <AdminInput type='password' placeholder='Password' id='password' />
+        <AdminInput
+          name='password'
+          type='password'
+          placeholder='Password'
+          id='password'
+        />
         <AdminSubmitButton>Log In</AdminSubmitButton>
       </AdminForm>
     </AdminLoginFormStyled>
