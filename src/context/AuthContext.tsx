@@ -44,12 +44,10 @@ export const AuthProvider = (): JSX.Element => {
         last_name: temp.last_name,
       });
       setLoading(false);
+      navigate('/admin/dashboard');
     }
+    setLoading(false);
   }, [tokens]);
-
-  useEffect(() => {
-    navigate('/admin/dashboard');
-  }, [loading]);
 
   const setAuthUser = (tokens: Tokens) => {
     localStorage.setItem('authTokens', JSON.stringify(tokens));
@@ -65,6 +63,7 @@ export const AuthProvider = (): JSX.Element => {
 
   let loginUser = async (event: React.FormEvent<CustomFormElements>) => {
     event.preventDefault();
+    setLoading(true);
     await axios
       .post(Endpoints.login, {
         email: event.currentTarget.elements.email.value,
@@ -75,6 +74,9 @@ export const AuthProvider = (): JSX.Element => {
           setAuthUser(response.data);
           setLoading(false);
         }
+      })
+      .then(() => {
+        navigate('/admin/dashboard');
       })
       .catch(function (error) {
         console.log(error);
