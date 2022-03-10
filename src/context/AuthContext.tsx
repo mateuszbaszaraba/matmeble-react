@@ -15,6 +15,7 @@ const AuthContextDefaultState = {
   user: null,
   tokens: null,
   loginUser: async (event: React.FormEvent<CustomFormElements>) => {},
+  logOut: () => {},
 };
 
 const AuthContext = React.createContext<AuthContextTypes>(
@@ -61,7 +62,7 @@ export const AuthProvider = (): JSX.Element => {
     });
   };
 
-  let loginUser = async (event: React.FormEvent<CustomFormElements>) => {
+  const loginUser = async (event: React.FormEvent<CustomFormElements>) => {
     event.preventDefault();
     setLoading(true);
     await axios
@@ -83,10 +84,18 @@ export const AuthProvider = (): JSX.Element => {
       });
   };
 
+  const logOut = () => {
+    localStorage.removeItem('authTokens');
+    setUser(null);
+    setLoading(true);
+    setTokens(null);
+  };
+
   let contextData = {
     user: user,
     tokens: tokens,
     loginUser: loginUser,
+    logOut: logOut,
   };
 
   return (
