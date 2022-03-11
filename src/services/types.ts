@@ -16,6 +16,7 @@ export type AuthContextTypes = {
   user: User | null;
   tokens: Tokens | null;
   loginUser: (event: React.FormEvent<CustomFormElements>) => void;
+  logOut: () => void;
 };
 
 export interface FormElements extends HTMLFormControlsCollection {
