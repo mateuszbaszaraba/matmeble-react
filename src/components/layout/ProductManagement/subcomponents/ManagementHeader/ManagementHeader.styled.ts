@@ -4,6 +4,7 @@ export const ManagementHeaderStyled = styled.section`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 1.8em;
 `;
 
 export const ManagementHeaderH1 = styled.p`
