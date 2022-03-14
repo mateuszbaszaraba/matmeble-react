@@ -5,4 +5,5 @@ export const InfoContentStyled = styled.div`
   text-transform: uppercase;
   text-align: center;
   font-weight: lighter;
+  margin-bottom: 5em;
 `;
