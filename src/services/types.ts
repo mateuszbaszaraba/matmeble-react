@@ -27,3 +27,34 @@ export interface FormElements extends HTMLFormControlsCollection {
 export interface CustomFormElements extends HTMLFormElement {
   readonly elements: FormElements;
 }
+
+export type SoftFurniture = {
+  id: string;
+  title: string;
+  image: string;
+  height: string;
+  width: string;
+  depth: string;
+  seat_depth: string;
+  container: number;
+  headrest: 'regulowany' | 'nieregulowany';
+
+  arm: 'tapicerowane' | 'drewniane';
+  sleep_func: boolean;
+  sleep_dim: string;
+  slug: string;
+};
+
+export type Armchair = {
+  id: string;
+  title: string;
+  image: string;
+  height: string;
+  width: string;
+  depth: string;
+  seat_depth: string;
+  container: number;
+  headrest: 'regulowany' | 'nieregulowany';
+
+  trim: 'niklowane' | 'drewniane' | 'tapicerowane';
+};
