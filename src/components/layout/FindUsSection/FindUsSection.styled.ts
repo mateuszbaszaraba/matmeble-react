@@ -9,6 +9,11 @@ export const FindUsSectionStyled = styled.section`
   margin-right: var(--minusGlobalMargin);
   padding-right: var(--globalMargin);
   color: var(--blackFontColor);
+
+  @media only screen and (min-width: 680px) {
+    margin: 0 -5em;
+    padding: 1em 5em 0 5em;
+  }
 `;
 
 // export const FindUsBack = styled.div`

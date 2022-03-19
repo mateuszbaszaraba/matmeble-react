@@ -4,6 +4,9 @@ export const ProdInfoSectionStyled = styled.section`
   width: 100%;
   height: auto;
   color: var(--blackFontColor);
+  @media only screen and (min-width: 680px) {
+    margin-top: 5em;
+  }
 `;
 
 export const ProdInfo = styled.div`

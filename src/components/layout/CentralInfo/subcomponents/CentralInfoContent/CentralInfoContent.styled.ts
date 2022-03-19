@@ -21,7 +21,7 @@ export const CentralContentHeader = styled.div`
 export const CentralHeaderSpan = styled.span`
   font-weight: bold;
   position: relative;
-  padding-bottom: 0.4em;
+  padding-bottom: 0.5em;
   padding-left: -0.3em;
 `;
 
@@ -33,6 +33,8 @@ export const CentralContentLine = styled.svg`
 `;
 
 export const CentralHeaderButton = styled.button`
+  cursor: pointer;
+  margin-top: 0.5em;
   font-size: 0.9rem;
   text-transform: uppercase;
   color: var(--whiteColor);

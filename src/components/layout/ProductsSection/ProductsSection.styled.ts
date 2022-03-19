@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const ProductsSectionStyled = styled.section`
   background-color: var(--lightGreyColor);
-  margin: 2em var(--minusGlobalMargin);
+  margin: 2em -5em;
   display: flex;
   gap: 3em;
   flex-direction: column;

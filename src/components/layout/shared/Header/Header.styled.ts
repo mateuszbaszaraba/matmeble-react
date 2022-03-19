@@ -20,7 +20,6 @@ export const HeaderBack = styled.div`
   left: 0;
   z-index: -3;
   @media only screen and (min-width: 680px) {
-    margin: -1.5em -5em;
     height: 10vh;
     padding: 1.5em 0;
   }

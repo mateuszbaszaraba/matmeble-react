@@ -35,7 +35,7 @@ export const AboutSectionText = styled.p`
   float: left;
 
   @media only screen and (min-width: 680px) {
-    margin-left: -20em;
+    margin-left: -15em;
     padding: 4em;
     margin-top: 4em;
   }

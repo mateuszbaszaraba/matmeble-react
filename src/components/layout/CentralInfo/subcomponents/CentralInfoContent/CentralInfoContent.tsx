@@ -6,8 +6,10 @@ import {
   CentralContentLine,
   CentralHeaderButton,
 } from './CentralInfoContent.styled';
+import { useNavigate } from 'react-router-dom';
 
 const CentralInfoContent = (): JSX.Element => {
+  let navigate = useNavigate();
   return (
     <CentralInfoContentStyled>
       <CentralContentHeader>
@@ -29,7 +31,9 @@ const CentralInfoContent = (): JSX.Element => {
           </CentralContentLine>
         </CentralHeaderSpan>
       </CentralContentHeader>
-      <CentralHeaderButton>Zobacz więcej</CentralHeaderButton>
+      <CentralHeaderButton onClick={() => navigate('/nasze-produkty')}>
+        Zobacz więcej
+      </CentralHeaderButton>
     </CentralInfoContentStyled>
   );
 };
