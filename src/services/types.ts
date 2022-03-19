@@ -30,6 +30,8 @@ export interface CustomFormElements extends HTMLFormElement {
 
 export type SoftFurniture = {
   id: string;
+  slug: string;
+  type: 'narożnik' | 'kanapa' | 'wersalka' | 'łóżko';
   title: string;
   image: string;
   height: string;
@@ -42,11 +44,12 @@ export type SoftFurniture = {
   arm: 'tapicerowane' | 'drewniane';
   sleep_func: boolean;
   sleep_dim: string;
-  slug: string;
 };
 
 export type Armchair = {
   id: string;
+  slug: string;
+  type: 'fotel' | 'pufa';
   title: string;
   image: string;
   height: string;

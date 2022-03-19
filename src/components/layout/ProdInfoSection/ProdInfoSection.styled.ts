@@ -8,7 +8,7 @@ export const ProdInfoSectionStyled = styled.section`
 
 export const ProdInfo = styled.div`
   width: 80%;
-  height: 20vh;
+  height: auto;
   font-weight: lighter;
   margin: 2em auto 0 auto;
   text-align: center;

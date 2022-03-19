@@ -1,10 +1,18 @@
 import React from 'react';
-import { ProductStyled } from './Product.styled';
+import { ProductStyled, ProductImg } from './Product.styled';
+import { Endpoints } from '../../../../../services/constants';
+import ProductInfo from '../ProductInfo/ProductInfo';
+import { Armchair, SoftFurniture } from '../../../../../services/types';
 
-const Product = ({ product }: { product: any }): JSX.Element => {
+const Product = ({
+  product,
+}: {
+  product: SoftFurniture | Armchair;
+}): JSX.Element => {
   return (
     <ProductStyled>
-      <p>{product.title}</p>
+      <ProductImg src={Endpoints.base_url + product.image} />
+      <ProductInfo title={product.title} type={product.type} />
     </ProductStyled>
   );
 };

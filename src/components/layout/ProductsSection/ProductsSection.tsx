@@ -3,9 +3,10 @@ import { ProductsSectionStyled } from './ProductsSection.styled';
 import axios from 'axios';
 import { Endpoints } from '../../../services/constants';
 import Product from './subcomponents/Product/Product';
+import { Armchair, SoftFurniture } from '../../../services/types';
 
 const ProductsSection = (): JSX.Element => {
-  const [products, setProducts] = useState<any[]>([]);
+  const [products, setProducts] = useState<SoftFurniture[] | Armchair[]>([]);
 
   useEffect(() => {
     axios.get(Endpoints.products).then((response) => {
@@ -17,7 +18,7 @@ const ProductsSection = (): JSX.Element => {
   return (
     <ProductsSectionStyled>
       {products!.map((product) => (
-        <Product product={product} />
+        <Product product={product} key={product.id} />
       ))}
     </ProductsSectionStyled>
   );
