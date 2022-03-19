@@ -3,7 +3,7 @@ import homeBack from '../../../assets/hero.jpeg';
 
 export const HeroSectionStyled = styled.section`
   color: var(--whiteColor);
-  height: 66.5vh;
+  height: 65vh;
   margin-top: 20vh;
   margin-left: 1.5em;
 

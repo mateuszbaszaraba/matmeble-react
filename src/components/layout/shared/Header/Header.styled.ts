@@ -11,14 +11,14 @@ export const HeaderStyled = styled.header`
   }
 `;
 
-export const HeaderBack = styled.header`
-  height: 17vh;
+export const HeaderBack = styled.div`
+  height: 15vh;
   width: 100%;
   background-color: #292929;
   position: absolute;
+  top: 0;
+  left: 0;
   z-index: -3;
-  margin-left: var(--minusGlobalMargin);
-  margin-top: var(--minusGlobalMargin);
   @media only screen and (min-width: 680px) {
     margin: -1.5em -5em;
     height: 10vh;

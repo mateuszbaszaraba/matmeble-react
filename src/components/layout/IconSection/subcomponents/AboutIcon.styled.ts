@@ -17,7 +17,7 @@ export const AboutIconInfo = styled.div`
 `;
 
 export const AboutIconTitle = styled.p`
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   margin-bottom: 0;
   font-weight: bold;
   @media only screen and (min-width: 920px) {
