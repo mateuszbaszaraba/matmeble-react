@@ -9,6 +9,10 @@ export const HeaderStyled = styled.header`
   @media only screen and (min-width: 680px) {
     height: 10vh;
   }
+  @media only screen and (min-width: 1300px) {
+    width: 1200px;
+    margin: 0 auto;
+  }
 `;
 
 export const HeaderBack = styled.div`
