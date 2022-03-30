@@ -14,6 +14,7 @@ import AdminDashboard from './components/layout/AdminDashboard/AdminDashboard';
 import PrivateRoute from './utils/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
 import Contact from './components/pages/Contact';
+import ProductDetails from './components/pages/ProductDetails';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
             <Route path='' element={<Navigate to='/home' />} />
             <Route path='/home' element={<Home />} />
             <Route path='/nasze-produkty' element={<Products />} />
+            <Route path='/nasze-produkty/:slug' element={<ProductDetails />} />
             <Route path='/kontakt' element={<Contact />} />
           </Route>
           <Route element={<AuthProvider />}>

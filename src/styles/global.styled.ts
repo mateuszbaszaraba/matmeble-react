@@ -5,6 +5,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Lato', sans-serif;
     margin: var(--globalMargin);
+    color: var(--blackFontColor);
   }
   
   :root {
