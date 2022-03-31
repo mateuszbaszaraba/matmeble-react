@@ -4,17 +4,12 @@ import axios from 'axios';
 import { Endpoints } from '../services/constants';
 import { useNavigate } from 'react-router-dom';
 import jwtDecode from 'jwt-decode';
-import {
-  Tokens,
-  User,
-  AuthContextTypes,
-  CustomFormElements,
-} from '../services/types';
+import { Tokens, User, AuthContextTypes } from '../services/types';
 
 const AuthContextDefaultState = {
   user: null,
   tokens: null,
-  loginUser: async (event: React.FormEvent<CustomFormElements>) => {},
+  loginUser: async (email: string, password: string) => {},
   logOut: () => {},
 };
 
@@ -62,16 +57,17 @@ export const AuthProvider = (): JSX.Element => {
     });
   };
 
-  const loginUser = async (event: React.FormEvent<CustomFormElements>) => {
-    event.preventDefault();
+  const loginUser = async (email: string, password: string) => {
     setLoading(true);
     await axios
       .post(Endpoints.login, {
-        email: event.currentTarget.elements.email.value,
-        password: event.currentTarget.elements.password.value,
+        email: email,
+        password: password,
       })
       .then((response) => {
-        if (response.status === 200) {
+        if (response.status !== 200) {
+          throw new Error(response.status.toString());
+        } else {
           setAuthUser(response.data);
           setLoading(false);
         }
@@ -79,8 +75,9 @@ export const AuthProvider = (): JSX.Element => {
       .then(() => {
         navigate('/admin/dashboard');
       })
-      .catch(function (error) {
+      .catch((error) => {
         console.log(error);
+        setLoading(false);
       });
   };
 

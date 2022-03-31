@@ -1,5 +1,3 @@
-import React from 'react';
-
 export type User = {
   email: string;
   first_name: string;
@@ -15,18 +13,9 @@ export type Tokens = {
 export type AuthContextTypes = {
   user: User | null;
   tokens: Tokens | null;
-  loginUser: (event: React.FormEvent<CustomFormElements>) => void;
+  loginUser: (email: string, password: string) => void;
   logOut: () => void;
 };
-
-export interface FormElements extends HTMLFormControlsCollection {
-  email: HTMLInputElement;
-  password: HTMLInputElement;
-}
-
-export interface CustomFormElements extends HTMLFormElement {
-  readonly elements: FormElements;
-}
 
 export type SoftFurniture = {
   id: string;
