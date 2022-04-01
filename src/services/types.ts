@@ -50,3 +50,6 @@ export type Armchair = {
 
   trim: 'niklowane' | 'drewniane' | 'tapicerowane';
 };
+
+export const softfurnituresArr = ['narożnik', 'kanapa', 'wersalka', 'łóżko'];
+export const armchairArr = ['fotel', 'pufa'];

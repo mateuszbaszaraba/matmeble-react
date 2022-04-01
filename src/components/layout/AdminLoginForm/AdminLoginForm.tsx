@@ -69,7 +69,7 @@ const AdminLoginForm = (): JSX.Element => {
           onChange={passwordChangeHandler}
           onBlur={passwordBlurHandler}
         />
-        {passwordHasError && <p>Password must has more than 5 characters</p>}
+        {passwordHasError && <p>Password must be at least 5 characters long</p>}
         <AdminSubmitButton disabled={!formIsValid}>Log In</AdminSubmitButton>
       </AdminForm>
     </AdminLoginFormStyled>

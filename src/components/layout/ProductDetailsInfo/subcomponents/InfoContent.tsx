@@ -1,14 +1,19 @@
 import React from 'react';
 import { InfoContentStyled } from './InfoContent.styled';
 import { LeftInfoBlock, RightInfoBlock } from '../ProductDetailsInfo.styled';
-import { Armchair, SoftFurniture } from '../../../../services/types';
+import {
+  Armchair,
+  SoftFurniture,
+  softfurnituresArr,
+  armchairArr,
+} from '../../../../services/types';
 
 const InfoContent = ({
   product,
 }: {
   product: SoftFurniture | Armchair | any;
 }): JSX.Element => {
-  if (product.type === 'narożnik' || 'kanapa' || 'wersalka' || 'łóżko') {
+  if (softfurnituresArr.includes(product.type)) {
     return (
       <InfoContentStyled>
         <LeftInfoBlock>
@@ -33,7 +38,7 @@ const InfoContent = ({
         </LeftInfoBlock>
         <RightInfoBlock>
           <p>
-            Zagłówki:<span>{product.headrest}</span>
+            Zagłówek:<span>{product.headrest}</span>
           </p>
           <p>
             Boki:<span>{product.arm}</span>
@@ -50,7 +55,7 @@ const InfoContent = ({
         </RightInfoBlock>
       </InfoContentStyled>
     );
-  } else if (product.type === 'fotel' || 'pufa') {
+  } else if (armchairArr.includes(product.type)) {
     return (
       <InfoContentStyled>
         <LeftInfoBlock>
@@ -60,17 +65,30 @@ const InfoContent = ({
               {product.title.charAt(0).toUpperCase() + product.title.slice(1)}
             </span>
           </p>
-          <p>Wysokość:</p>
-          <p>Szerokość:</p>
-          <p>Głębokość:</p>
-          <p>Głębokość siedziska:</p>
+          <p>
+            Wysokość:<span>{product.height}</span>
+          </p>
+          <p>
+            Szerokość:<span>{product.width}</span>
+          </p>
+          <p>
+            Głębokość:<span>{product.depth}</span>
+          </p>
+          <p>
+            Głębokość siedziska:<span>{product.seat_depth}</span>
+          </p>
         </LeftInfoBlock>
         <RightInfoBlock>
-          <p>Zagłówki:</p>
-          <p>Boki:</p>
-          <p>Funkcja spania:</p>
-          <p>Powierzchnia spania:</p>
-          <p>Pojemniki:</p>
+          <p>
+            Zagłówek:<span>{product.headrest}</span>
+          </p>
+          <p>
+            Płozy:<span>{product.trim}</span>
+          </p>
+          <p>
+            Pojemniki:
+            <span>{product.container ? 'Brak' : product.container}</span>
+          </p>
         </RightInfoBlock>
       </InfoContentStyled>
     );
