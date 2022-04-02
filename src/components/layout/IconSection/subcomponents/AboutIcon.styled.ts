@@ -9,6 +9,7 @@ export const AboutIconStyled = styled.div`
 
   @media only screen and (min-width: 920px) {
     width: 33%;
+    justify-content: center;
   }
 `;
 
@@ -36,11 +37,15 @@ export const AboutIconDesc = styled.p`
 
 export const AboutIconIcon = styled.div`
   width: 10%;
+  @media only screen and (min-width: 920px) {
+    width: 15%;
+    margin-right: 2em;
+  }
   svg {
     width: 2.9em !important;
     height: unset;
     @media only screen and (min-width: 920px) {
-      width: 2.5em !important;
+      width: 3.6em !important;
     }
   }
 `;

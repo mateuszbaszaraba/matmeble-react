@@ -4,6 +4,9 @@ import aboutBack from '../../../assets/about_back.jpeg';
 export const AboutSectionStyled = styled.section`
   width: 100%;
   height: 70vh;
+  @media only screen and (min-width: 920px) {
+    margin-bottom: 9em;
+  }
 `;
 
 export const AboutSectionBack = styled.div`
@@ -38,5 +41,9 @@ export const AboutSectionText = styled.p`
     margin-left: -15em;
     padding: 4em;
     margin-top: 4em;
+  }
+
+  @media only screen and (min-width: 920px) {
+    margin-top: 35vh;
   }
 `;

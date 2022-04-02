@@ -6,6 +6,7 @@ export const ProdInfoSectionStyled = styled.section`
   color: var(--blackFontColor);
   @media only screen and (min-width: 680px) {
     margin-top: 5em;
+    margin-bottom: 4em;
   }
 `;
 

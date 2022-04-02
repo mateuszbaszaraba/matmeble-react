@@ -1,5 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { ProductsSectionStyled } from './ProductsSection.styled';
+import {
+  ProductsSectionStyled,
+  ProductsContainer,
+} from './ProductsSection.styled';
 import axios from 'axios';
 import { Endpoints } from '../../../services/constants';
 import Product from './subcomponents/Product/Product';
@@ -17,9 +20,11 @@ const ProductsSection = (): JSX.Element => {
 
   return (
     <ProductsSectionStyled>
-      {products!.map((product) => (
-        <Product product={product} key={product.id} />
-      ))}
+      <ProductsContainer>
+        {products!.map((product) => (
+          <Product product={product} key={product.id} />
+        ))}
+      </ProductsContainer>
     </ProductsSectionStyled>
   );
 };

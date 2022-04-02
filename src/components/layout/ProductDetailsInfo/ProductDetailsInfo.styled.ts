@@ -1,11 +1,24 @@
 import styled from 'styled-components';
 
 export const ProductDetailsInfoStyled = styled.section`
-  background-color: var(--lightGreyColor);
-  margin: 2em var(--minusGlobalMargin) 0 var(--minusGlobalMargin);
-  padding: 0.1em var(--globalMargin) 3em var(--globalMargin);
   font-weight: lighter;
-  width: auto;
+  padding: 3em 0;
+`;
+
+export const DetailsBack = styled.div`
+  width: 100%;
+  height: 80vh;
+  background-color: var(--lightGreyColor);
+  margin-left: var(--minusGlobalMargin);
+  padding-right: var(--globalMargin);
+  position: absolute;
+  left: 0;
+  z-index: -9;
+
+  @media only screen and (min-width: 920px) {
+    height: 50vh;
+    padding-top: 20vh;
+  }
 `;
 
 export const LeftInfoBlock = styled.div`

@@ -12,7 +12,7 @@ export const IconSectionStyled = styled.section`
 
   @media only screen and (min-width: 920px) {
     flex-direction: row;
-    height: 40vh;
+    height: 32vh;
   }
 `;
 
@@ -27,7 +27,7 @@ export const IconSectionBackground = styled.div`
   z-index: -9;
 
   @media only screen and (min-width: 920px) {
-    height: 60vh;
+    height: 50vh;
     padding-top: 20vh;
   }
 `;

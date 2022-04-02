@@ -1,5 +1,8 @@
 import React from 'react';
-import { ProductDetailsInfoStyled } from './ProductDetailsInfo.styled';
+import {
+  ProductDetailsInfoStyled,
+  DetailsBack,
+} from './ProductDetailsInfo.styled';
 import ContentHeader from '../shared/ContentHeader/ContentHeader';
 import { Armchair, SoftFurniture } from '../../../services/types';
 import InfoContent from './subcomponents/InfoContent';
@@ -11,6 +14,7 @@ const ProductDetailsInfo = ({
 }): JSX.Element => {
   return (
     <ProductDetailsInfoStyled>
+      <DetailsBack />
       <ContentHeader lightHeader={''} boldHeader='Specyfikacja' />
       {<InfoContent product={product} />}
     </ProductDetailsInfoStyled>
