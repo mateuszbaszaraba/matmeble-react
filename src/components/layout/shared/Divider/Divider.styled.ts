@@ -9,7 +9,7 @@ export const DividerStyled = styled.section`
 `;
 
 export const DividerLine = styled.section`
-  width: 80%;
+  width: 90%;
   height: 0.1em;
   background-color: #b8b8b8;
 `;
